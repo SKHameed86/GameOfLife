@@ -1,0 +1,9 @@
+The code doesn't work - I was unable to debug the code, as the recommended debugger failed to install to the directory.
+
+With regards to the exercise, it was assumed that I had to add to and complete the code that was provided in the golSpec and gol files.
+
+This was attempted; the Rules were straighforward enough, as was setting up the grids for the Game.
+
+However, the goal of my code was to copy the initialState array to an intermediary (mirrorState), where the rules could be applied by determining how many neighbours the living cells had.
+
+With the rules successfully applied, the new state of the cells would be passed to the newState array, and there would be a counter to track how many iterations there had been.
