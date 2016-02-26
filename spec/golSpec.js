@@ -28,7 +28,6 @@ describe('The rules', function(){
 		expect(overcrowding(0,7)).toBe(0);
 		expect(overcrowding(0,8)).toBe(0);
 	});
-});
 	
 //Scenario 3: Survival
 	it('Any live cell with two or three live neighbours, stays alive - thus surviving.', function (){
@@ -38,7 +37,6 @@ describe('The rules', function(){
 		expect(survival(1,3)).toBe(1);
 		expect(survival(1,4)).toBe(0);
 	});
-});
 
 //Scenario 4: Creation of Life
 	it('An empty cell with three live neighbours, creates a new live cell in this space - thus creating new life.', function (){
@@ -48,13 +46,11 @@ describe('The rules', function(){
 		expect(createlife(0,3)).toBe(1);
 		expect(createlife(0,4)).toBe(0);
 	});
-});
 
 //Scenario 5: No Live Cells
 	it('With no live cells, the next state also contains no live cells.', function (){
 		expect(barren(0,0)).toBe(0);
 	});
-});
 
 //Scenario 6: Outcomes for Seeded Grid
 describe('Game', function (){
@@ -75,9 +71,8 @@ describe('Game', function (){
 
 		expect(evolve(initialState)).toEqual(resultState);
 	});
-});
 
-it('can die out.', function(){
+	it('can die out.', function(){
 		var initialState = [
 			[1,0,1],
 			[0,1,1],
@@ -92,9 +87,8 @@ it('can die out.', function(){
 
 		expect(evolve(initialState)).toEqual(resultState);
 	});
-});
 
-it('can beat the odds.', function(){
+	it('can beat the odds.', function(){
 		var initialState = [
 			[1,0,0],
 			[0,1,0],
@@ -109,9 +103,8 @@ it('can beat the odds.', function(){
 
 		expect(evolve(initialState)).toEqual(resultState);
 	});
-});
 
-it('can perform a "miracle of life".', function(){
+	it('can perform a "miracle of life".', function(){
 		var initialState = [
 			[0,0,0],
 			[1,0,1],
@@ -126,9 +119,8 @@ it('can perform a "miracle of life".', function(){
 
 		expect(evolve(initialState)).toEqual(resultState);
 	});
-});
 
-it('can remain barren', function(){
+	it('can remain barren', function(){
 		var initialState = [
 			[0,0,0],
 			[0,0,0],
