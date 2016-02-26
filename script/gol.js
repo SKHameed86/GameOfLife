@@ -1,6 +1,6 @@
 module.exports = function(){
 	function underpopulation(cellState, numberOfLiveNeighbours) {
-		if (numberOfLiveNeighbours < 2 && cellState == 1){
+		if (cellState == 1 && numberOfLiveNeighbours < 2){
 			return 1;
 		}
 		else{
@@ -9,7 +9,11 @@ module.exports = function(){
 	}
 
 	function evolve(gridState){
-		var newState = [];
+		var newState = [
+		{x: 0, y: 1},
+		{x: 0, y: 0},
+		{x: 0, y: -1},
+		];
 		return newState;
 	}
 
