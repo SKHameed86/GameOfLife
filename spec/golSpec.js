@@ -51,7 +51,8 @@ describe('The rules', function(){
 	it('With no live cells, the next state also contains no live cells.', function (){
 		expect(barren(0,0)).toBe(0);
 	});
-
+});
+	
 //Scenario 6: Outcomes for Seeded Grid
 describe('Game', function (){
 	var evolve = require('../script/gol')().evolve;
@@ -75,7 +76,7 @@ describe('Game', function (){
 	it('can die out.', function(){
 		var initialState = [
 			[1,0,1],
-			[0,1,1],
+			[1,1,1],
 			[0,1,0]
 		];
 

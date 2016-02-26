@@ -48,16 +48,16 @@ module.exports = function(){
 	}
 
 	function evolve(gridState){
-		var newState = [
-		{x: 0, y: 1},
-		{x: 0, y: 0},
-		{x: 0, y: -1},
-		];
+		var newState = [];
 		return newState;
 	}
 
 	return {
 		underpopulation: underpopulation,
+		overcrowding: overcrowding,
+		survival: survival,
+		createlife: createlife,
+		barren: barren,
 		evolve: evolve
 	};
 };
